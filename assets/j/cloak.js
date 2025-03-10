@@ -1,4 +1,4 @@
-window.addEventListener('beforeunload', function (e) {
-    e.preventDefault();
-    document.title = "Google Drive"
+document.addEventListener('visibilitychange', function(e) {
+  document.title = "Google Docs"
+  console.log(document.hidden);
 });
