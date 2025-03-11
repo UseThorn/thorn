@@ -1,4 +1,6 @@
-document.addEventListener('visibilitychange', function(e) {
-  document.title = "Google Docs"
-  console.log(document.hidden);
-});
+document.addEventListener('visibilitychange', function () {
+    if (document.hidden) {
+        document.title = "Google Docs"; 
+    } else {
+        document.title = "Thorn";
+      
