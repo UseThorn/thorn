@@ -1,11 +1,13 @@
-// del file after out of development
+// Delete file after development
 try {
-const p = window.atob("dGhvcg==")
-const guess = input("Please enter the password to continue")
+    const p = window.atob("dGhvcg==");
+    const guess = prompt("Please enter the password to continue to the exclusive math book");
 
-if (window.btoa(p) == p) {
- alert("good")
-}
+    if (guess === p) {
+        alert("Good");
+    } else {
+        alert("Incorrect password");
+    }
 } catch (e) {
-  alert(e)
+    alert("Error: " + e);
 }
