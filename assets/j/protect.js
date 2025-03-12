@@ -5,7 +5,7 @@ try {
     if (input === p) {
         alert("Welcome :)"); // correct :D
     } else {
-        alert("Incorrect password. Try again.");
+        alert("Incorrect password. go do tour math homework.");
         window.location.reload(); // prevent them from seeing 
 
     }
