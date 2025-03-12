@@ -5,7 +5,6 @@ try {
 
     if (guess === p) {
         alert("Welcome :)");
-        document.body.style.display = "block" // only when pswd is good show
         return;
     } else {
         window.location.reload() // now they cant get through
