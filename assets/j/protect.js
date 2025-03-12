@@ -1,12 +1,13 @@
 // Delete file after development
 try {
     const p = window.atob("dGhvcg==");
-    const guess = prompt("Please enter the password to continue to the exclusive math book");
+    const guess = prompt("Please enter the password to continue to the exclusive math book").toLowerCase();
 
     if (guess === p) {
-        alert("Good");
+        alert("Welcome :)");
+        return;
     } else {
-        alert("Incorrect password");
+        window.location.reload() // now they cant get through
     }
 } catch (e) {
     alert("Error: " + e);
