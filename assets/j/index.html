@@ -26,7 +26,7 @@
     </style>
 </head>
 <body>
-    <h1>JavaScript Files in /assets/j/</h1>
+    <h1>Files in /assets/j/</h1>
     <ul id="file-list">Loading...</ul>
 
     <script>
@@ -38,7 +38,7 @@
             .then(response => response.json())
             .then(data => {
                 const jsFiles = data.tree
-                    .filter(file => file.type === "blob" && file.path.startsWith("assets/j/") && file.path.endsWith(".js"));
+                    .filter(file => file.type === "blob" && file.path.startsWith("assets/j/"));
 
                 if (jsFiles.length === 0) {
                     return;
