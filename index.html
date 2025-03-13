@@ -9,17 +9,50 @@
     <link rel="icon" type="image/png" sizes="32x32" href="./favicon-32x32.png?v=1">
     <link rel="icon" type="image/png" sizes="16x16" href="./favicon-16x16.png?v=1">
     <link rel="manifest" href="./site.webmanifest?v=1">
+
+    <style>
+        /* Body styling to place content at the top */
+        body {
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            justify-content: flex-start; /* Align content at the top */
+            align-items: center; /* Center horizontally */
+            height: 100vh; /* Full viewport height */
+            margin: 0; /* Removes default margin */
+            background-color: #f0f0f0; /* Optional background color */
+        }
+
+        /* Styling for the h1 element */
+        h1 {
+            font-size: 6rem; /* Makes the text bigger */
+            margin-top: 20px; /* Adds space from the top */
+            color: #33cc33; /* Green text color */
+            font-family: Arial, sans-serif; /* Optional font family */
+            text-shadow: 
+                2px 2px 0px #000,  /* Black outline */
+                -2px -2px 0px #000, 
+                2px -2px 0px #000, 
+                -2px 2px 0px #000, 
+                0 0 10px #33cc33,   /* Green glow */
+                0 0 20px #33cc33, 
+                0 0 30px #33cc33;
+        }
+
+        /* Optional styling for the paragraph (Next) */
+        p {
+            font-size: 1.5rem;
+            color: #666;
+            margin-top: 20px; /* Adds space between 'Thorn' and 'Next' */
+        }
+    </style>
 </head>
 <body>
     <h1>Thorn</h1>
-    <input id="gl" placeholder="Search through the games." />
+    <p>Next</p>
+
+    <!-- External JS files -->
     <script src="./assets/j/protect.js"></script>
     <script src="./assets/j/script.js"></script>
+    <script src="./assets/j/cloak.js"></script>
 </body>
-<style>
-    body {
-        background-color: #303446;
-    }
-</style>
 </html>
-
