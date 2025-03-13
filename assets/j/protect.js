@@ -1,4 +1,4 @@
-const PASSWORD = window.atob("dGhvcg==");
+const PASSWORD = window.atob("Z2F5");
 const STORAGE_KEY = "@thorn_math/loggedIn";
 const isLoggedIn = localStorage.getItem(STORAGE_KEY) === "true";
 
