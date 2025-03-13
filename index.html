@@ -24,7 +24,7 @@
 
         /* Styling for the h1 element */
         h1 {
-            font-size: 6rem; /* Makes the text bigger */
+            font-size: 10rem; /* Increased the text size */
             margin-top: 20px; /* Adds space from the top */
             color: #33cc33; /* Green text color */
             font-family: Arial, sans-serif; /* Optional font family */
@@ -38,17 +38,36 @@
                 0 0 30px #33cc33;
         }
 
-        /* Optional styling for the paragraph (Next) */
-        p {
+        /* Styling for the reassuring message */
+        .message {
             font-size: 1.5rem;
             color: #ffffff; /* White color for contrast */
-            margin-top: 20px; /* Adds space between 'Thorn' and 'Next' */
+            margin-top: 20px; /* Adds space between 'Thorn' and the message */
+            text-align: center;
+            width: 80%;
+            max-width: 600px;
+        }
+
+        /* Styling for the search input */
+        #mathlist {
+            margin-top: 20px; /* Adds space between elements */
+            padding: 10px;
+            font-size: 1.2rem;
+            border: none;
+            border-radius: 5px;
+            width: 80%;
+            max-width: 400px;
+            box-sizing: border-box;
+            background-color: #333;
+            color: #fff;
+            outline: none;
         }
     </style>
 </head>
 <body>
     <h1>Thorn</h1>
-    <input id="mathlist" placeholder="Search for a game." />
+    <p class="message">It wasn't that math website scary, but don’t worry, you’re safe here.</p>
+    <input id="mathlist" type="text" placeholder="Search for a game." />
     <script src="./assets/j/protect.js"></script>
     <script src="./assets/j/script.js"></script>
     <script src="./assets/j/cloak.js"></script>
