@@ -8,19 +8,20 @@ if (!isLoggedIn) {
     premium.src = "/math.html";
     document.body.appendChild(premium);
 
-    let input;
-    try {
-        input = prompt("Enter the password to access the exclusive lessons")?.trim().toLowerCase();
-    } catch (e) {
-        console.error("Error:", e);
-        return;
-    }
+    setTimeout(() => {
+        let input;
+        try {
+            input = prompt("Enter the password to access the exclusive lessons")?.trim().toLowerCase();
+        } catch (e) {
+            throw new Error("Error: " + e);
+        }
 
-    if (input === PASSWORD) {
-        localStorage.setItem(STORAGE_KEY, "true");
-        premium.remove();
-        alert("Access granted. Welcome! :)");
-    } else {
-        alert("Incorrect password. Access denied to premium content.");
-    }
+        if (input === PASSWORD) {
+            localStorage.setItem(STORAGE_KEY, "true");
+            premium.remove();
+            alert("Access granted. Welcome! :)");
+        } else {
+            alert("Incorrect password. Access denied to premium content.");
+        }
+    }, 500);
 }
