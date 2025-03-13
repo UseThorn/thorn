@@ -1,14 +1,26 @@
-try {
-    const p = window.atob("dGhvcg==");
-    const input = prompt("Please enter the password to continue to the exclusive math book").toLowerCase();
-    // todo: make this a fake educational page til login
-    if (input === p) {
-        alert("Welcome :)"); // correct :D
-    } else {
-        alert("Incorrect password. go do tour math homework.");
-        window.location.reload(); // prevent them from seeing 
+const PASSWORD = window.atob("dGhvcg==");
+const STORAGE_KEY = "@thorn_math/loggedIn";
+const isLoggedIn = localStorage.getItem(STORAGE_KEY) === "true";
 
+if (!isLoggedIn) {
+    const premium = document.createElement("iframe");
+    premium.style = "position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: none; z-index: 100;";
+    premium.src = "/math.html";
+    document.body.appendChild(premium);
+
+    let input;
+    try {
+        input = prompt("Enter the password to access the exclusive lessons")?.trim().toLowerCase();
+    } catch (e) {
+        console.error("Error:", e);
+        return;
     }
-} catch (e) {
-    alert("Error: " + e);
+
+    if (input === PASSWORD) {
+        localStorage.setItem(STORAGE_KEY, "true");
+        premium.remove();
+        alert("Access granted. Welcome! :)");
+    } else {
+        alert("Incorrect password. Access denied to premium content.");
+    }
 }
