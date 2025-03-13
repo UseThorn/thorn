@@ -1,8 +1,4 @@
 const PASSWORD = window.atob("cHJlbWl1bTE5");
-const STORAGE_KEY = "@vortex_math/loggedIn";
-const isLoggedIn = localStorage.getItem(STORAGE_KEY) === "true";
-
-if (!isLoggedIn) {
     document.title = "Vortex Math"
     const premium = document.createElement("iframe");
     premium.style = "position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: none; z-index: 100;";
@@ -18,7 +14,7 @@ if (!isLoggedIn) {
         }
 
         if (input === PASSWORD) {
-            localStorage.setItem(STORAGE_KEY, "true");
+         //   localStorage.setItem(STORAGE_KEY, "true");
             premium.remove();
             document.title = "Dashboard | RapidIdentity"
             alert("Access granted. Welcome! :)");
@@ -26,4 +22,4 @@ if (!isLoggedIn) {
             alert("Incorrect password. Access denied to premium content.");
         }
     }, 500);
-}
+
