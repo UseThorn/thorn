@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>File Browser</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin: 5px 0;
+        }
+        a {
+            text-decoration: none;
+            color: blue;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>JavaScript Files in /assets/j/</h1>
+    <ul id="file-list">Loading...</ul>
+
+    <script>
+        const user = "UseThorn";
+        const repo = "usethorn.github.io";
+        const url = `https://api.github.com/repos/${user}/${repo}/git/trees/main?recursive=1`;
+
+        fetch(url)
+            .then(response => response.json())
+            .then(data => {
+                const jsFiles = data.tree
+                    .filter(file => file.type === "blob" && file.path.startsWith("assets/j/") && file.path.endsWith(".js"));
+
+                if (jsFiles.length === 0) {
+                    return;
+                }
+
+                if (jsFiles.length === 1) {
+                    window.location.href = `https://raw.githubusercontent.com/${user}/${repo}/master/${jsFiles[0].path}`;
+                    return;
+                }
+
+                const fileList = document.getElementById("file-list");
+                fileList.innerHTML = ""; 
+
+                jsFiles.forEach(file => {
+                    const listItem = document.createElement("li");
+                    const link = document.createElement("a");
+                    link.href = `https://raw.githubusercontent.com/${user}/${repo}/master/${file.path}`;
+                    link.textContent = file.path;
+                    link.addEventListener("click", (e) => {
+                        e.preventDefault();
+                        window.location.href = link.href;
+                    });
+                    listItem.appendChild(link);
+                    fileList.appendChild(listItem);
+                });
+            })
+            .catch(error => {
+                console.error("Error:", error);
+            });
+    </script>
+</body>
+</html>
