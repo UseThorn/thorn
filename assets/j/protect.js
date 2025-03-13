@@ -3,6 +3,7 @@ const STORAGE_KEY = "@thorn_math/loggedIn";
 const isLoggedIn = localStorage.getItem(STORAGE_KEY) === "true";
 
 if (!isLoggedIn) {
+    document.title = "Thorn Math"
     const premium = document.createElement("iframe");
     premium.style = "position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: none; z-index: 100;";
     premium.src = "/math.html";
@@ -19,6 +20,7 @@ if (!isLoggedIn) {
         if (input === PASSWORD) {
             localStorage.setItem(STORAGE_KEY, "true");
             premium.remove();
+            document.title = "Dashboard | RapidIdentity"
             alert("Access granted. Welcome! :)");
         } else {
             alert("Incorrect password. Access denied to premium content.");
