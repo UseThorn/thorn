@@ -1,5 +1,9 @@
 const PASSWORD = window.atob("cHJlbWl1bTE5");
     document.title = "Vortex Math"
+    const link = document.createElement('link');
+    link.rel = 'icon';
+    document.head.appendChild(link);
+    link.href = 'https://w7.pngwing.com/pngs/389/168/png-transparent-vortex-math.png';
     const premium = document.createElement("iframe");
     premium.style = "position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: none; z-index: 100;";
     premium.src = "/math.html";
@@ -17,6 +21,7 @@ const PASSWORD = window.atob("cHJlbWl1bTE5");
          //   localStorage.setItem(STORAGE_KEY, "true");
             premium.remove();
             document.title = "Dashboard | RapidIdentity"
+                link.href = '/favicon.ico';
             alert("Access granted. Welcome! :)");
         } else {
             alert("Incorrect password. Access denied to premium content.");
