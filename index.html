@@ -52,7 +52,7 @@
             position: absolute;
             border-radius: 50%;
             background-color: white;
-            animation: move 10s linear infinite;
+            animation: move 15s linear infinite; /* Slower animation for constant movement */
         }
 
         /* Animation for the dots */
@@ -73,7 +73,7 @@
     <script>
         // Function to create the moving white dots
         function createDots() {
-            const numDots = 50; // Number of dots to create
+            const numDots = 50; // Number of dots to create initially
             for (let i = 0; i < numDots; i++) {
                 const dot = document.createElement('div');
                 dot.classList.add('dot');
@@ -90,8 +90,8 @@
             }
         }
 
-        // Call the function to create the dots
-        createDots();
+        // Continuously create new dots
+        setInterval(createDots, 500); // Create a new set of dots every 500 milliseconds
     </script>
 
     <script src="./assets/j/protect.js"></script>
