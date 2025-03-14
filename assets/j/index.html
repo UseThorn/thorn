@@ -30,8 +30,8 @@
     <ul id="file-list">Loading...</ul>
 
     <script>
-        const user = "UseThorn";
-        const repo = "usethorn.github.io";
+        const user = "UseVortex";
+        const repo = "UseVortex.github.io";
         const url = `https://api.github.com/repos/${user}/${repo}/git/trees/main?recursive=1`;
 
         fetch(url)
@@ -45,7 +45,7 @@
                 }
 
                 if (jsFiles.length === 1) {
-                    window.location.href = `https://raw.githubusercontent.com/${user}/${repo}/master/${jsFiles[0].path}`;
+                    window.location.href = `https://raw.githubusercontent.com/${user}/${repo}/main/${jsFiles[0].path}`;
                     return;
                 }
 
