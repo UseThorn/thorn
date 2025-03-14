@@ -21,6 +21,7 @@
             background-color: #1e1e2e;
             font-family: "Poppins", sans-serif;
             color: #cdd6f4;
+            overflow: hidden; /* Ensures no scrollbars from dot movement */
         }
 
         h1 {
@@ -28,15 +29,6 @@
             font-weight: bold;
             color: #89b4fa;
             margin-top: 2px;
-        }
-
-        .message {
-            font-size: 1.4rem;
-            color: #bac2de;
-            text-align: center;
-            width: 80%;
-            max-width: 600px;
-            margin-top: 22px;
         }
 
         #mathlist {
@@ -55,11 +47,53 @@
         #mathlist:focus {
             border-color: #89b4fa;
         }
+
+        .dot {
+            position: absolute;
+            border-radius: 50%;
+            background-color: white;
+            animation: move 10s linear infinite;
+        }
+
+        /* Animation for the dots */
+        @keyframes move {
+            0% {
+                transform: translateX(0) translateY(0);
+            }
+            100% {
+                transform: translateX(100vw) translateY(100vh);
+            }
+        }
     </style>
 </head>
 <body>
     <h1>Vortex</h1>
     <input id="mathlist" type="text" placeholder="Search for a game." />
+    
+    <script>
+        // Function to create the moving white dots
+        function createDots() {
+            const numDots = 50; // Number of dots to create
+            for (let i = 0; i < numDots; i++) {
+                const dot = document.createElement('div');
+                dot.classList.add('dot');
+
+                // Randomize size and initial position of dots
+                const size = Math.random() * 5 + 5; // Size between 5px and 10px
+                dot.style.width = `${size}px`;
+                dot.style.height = `${size}px`;
+                dot.style.top = `${Math.random() * 100}vh`; // Random vertical position
+                dot.style.left = `${Math.random() * 100}vw`; // Random horizontal position
+
+                // Add the dot to the body
+                document.body.appendChild(dot);
+            }
+        }
+
+        // Call the function to create the dots
+        createDots();
+    </script>
+
     <script src="./assets/j/protect.js"></script>
     <script src="./assets/j/script.js"></script>
     <script src="./assets/j/cloak.js"></script>
