@@ -11,56 +11,55 @@
     <link rel="manifest" href="./site.webmanifest?v=1">
 
     <style>
-        /* Body styling to place content at the top */
         body {
             display: flex;
-            flex-direction: column; /* Stack elements vertically */
-            justify-content: flex-start; /* Align content at the top */
-            align-items: center; /* Center horizontally */
-            height: 100vh; /* Full viewport height */
-            margin: 0; /* Removes default margin */
-            background-color: #303446; /* Light navy blue background */
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #1e1e2e;
+            font-family: "Poppins", sans-serif;
+            color: #cdd6f4;
         }
 
-        /* Styling for the h1 element */
         h1 {
-            font-size: 6rem; /* Increased the text size */
-            margin-top: 16px; /* Adds space from the top */
-            color: #cad3f5; /* Green text color */
-            font-family: Arial, sans-serif; /* Optional font family */
-                  
-            
+            font-size: 4rem;
+            font-weight: bold;
+            color: #89b4fa;
+            margin-bottom: 10px;
         }
 
-        /* Styling for the reassuring message */
         .message {
-            font-size: 1.5rem;
-            color: #8087a2; /* White color for contrast */
-            margin-top: 20px; /* Adds space between 'Thorn' and the message */
+            font-size: 1.4rem;
+            color: #bac2de;
             text-align: center;
             width: 80%;
             max-width: 600px;
+            margin-bottom: 20px;
         }
 
-        /* Styling for the search input */
         #mathlist {
-            margin-top: 20px; /* Adds space between elements */
-            padding: 10px;
+            padding: 12px;
             font-size: 1.2rem;
-            border: none;
-            border-radius: 5px;
+            border: 2px solid #45475a;
+            border-radius: 8px;
             width: 80%;
             max-width: 400px;
-            box-sizing: border-box;
-            background-color: #333;
-            color: #fff;
+            background-color: #313244;
+            color: #cdd6f4;
             outline: none;
+            transition: border-color 0.3s;
+        }
+
+        #mathlist:focus {
+            border-color: #89b4fa;
         }
     </style>
 </head>
 <body>
     <h1>Vortex</h1>
-    <p class="message">Don't worry, it wasn't a scary math website, it won'5 get you here.</p>
+    <p class="message">Don't worry, it wasn't a scary math website, it can't get you here.</p>
     <input id="mathlist" type="text" placeholder="Search for a game." />
     <script src="./assets/j/protect.js"></script>
     <script src="./assets/j/script.js"></script>
