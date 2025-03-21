@@ -1,5 +1,11 @@
 [
   {
+    "name": "Yohoho.io",
+    "logo": "assets/img/yhh.png",
+    "path": "gm/yhh/",
+    "broken": false
+  },
+  {
     "name": "Tiny Fishing",
     "logo": "assets/img/tf.png",
     "path": "gm/tf/",
