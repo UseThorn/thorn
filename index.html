@@ -13,19 +13,22 @@
     <style>
         body {
             display: flex;
-            justify-content: center;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
             height: 100vh;
             margin: 0;
             background-color: #1e1e2e;
             font-family: "Poppins", sans-serif;
             color: #cdd6f4;
+            padding-top: 10vh;
         }
 
         h1 {
             font-size: 6rem;
             font-weight: bold;
             color: #89b4fa;
-            margin-top: 2px;
+            margin-bottom: 20px;
         }
 
         #mathlist {
@@ -46,31 +49,34 @@
             border-color: #89b4fa;
         }
 
+        #list {
+            margin-top: 20px;
+        }
+
     </style>
 </head>
 <body>
     <h1>Vortex</h1>
     <input id="mathlist" type="text" placeholder="Search for a game..." />
-    <div id="list" class=""></div>
+    <div id="list"></div>
+
     <script src="./assets/j/protect.js"></script>
     <script>
-   window
-.fetch("./assets/json/gl.json").then(async (response) => {
-   if (!response.ok) {
-    throw new Error("Failed to fetch json.")
-   }
+        window.fetch("./assets/json/gl.json").then(async (response) => {
+            if (!response.ok) {
+                throw new Error("Failed to fetch json.");
+            }
 
-   let data = await response.json()
-   
-   data.forEach(entry => {
-      console.log("entry name", entry.name)
-      let location = window.location.href + entry.path
-      console.log("location", location)
-      
-   });
-   //TODO: make it load games, above is tmmr stuf
-});
+            let data = await response.json();
+            
+            data.forEach(entry => {
+                console.log("entry name", entry.name);
+                let location = window.location.href + entry.path;
+                console.log("location", location);
+            });
 
-</script>
+            // TODO: Make it load games, above is for debugging
+        });
+    </script>
 </body>
 </html>
