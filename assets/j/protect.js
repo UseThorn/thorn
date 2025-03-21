@@ -3,7 +3,7 @@ const PASSWORD = window.atob("cHJlbWl1bTE5");
     const link = document.createElement('link');
     link.rel = 'icon';
     document.head.appendChild(link);
-    link.href = 'https://w7.pngwing.com/pngs/389/168/png-transparent-vortex-math.png';
+    link.href = '';
     const premium = document.createElement("iframe");
     premium.style = "position: fixed; top: 0; left: 0; width: 100%; height: 100%; border: none; z-index: 100;";
     premium.src = "/math.html";
@@ -12,7 +12,7 @@ const PASSWORD = window.atob("cHJlbWl1bTE5");
     setTimeout(() => {
         let input;
         try {
-            input = prompt("Enter the password to access the exclusive lessons")?.trim().toLowerCase();
+            input = prompt("Enter the password to access the nginx server.")?.trim().toLowerCase();
         } catch (e) {
             throw new Error("Error: " + e);
         }
@@ -24,7 +24,7 @@ const PASSWORD = window.atob("cHJlbWl1bTE5");
                 link.href = '/favicon.ico';
             alert("Access granted. Welcome! :)");
         } else {
-            alert("Incorrect password. Access denied to premium content.");
+            alert("Incorrect password. Access denied to nginx server.");
         }
     }, 500);
 
