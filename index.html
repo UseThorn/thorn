@@ -54,6 +54,24 @@
     <input id="mathlist" type="text" placeholder="Search for a game..." />
     <div id="list" class=""></div>
     <script src="./assets/j/protect.js"></script>
-    <script src="./assets/j/container.js"></script>
+    <script>
+   window
+.fetch("./assets/json/gl.json").then(async (response) => {
+   if (!response.ok) {
+    throw new Error("Failed to fetch json.")
+   }
+
+   let data = await response.json()
+   
+   data.forEach(entry => {
+      console.log("entry name", entry.name)
+      let location = window.location.href + entry.path
+      console.log("location", location)
+      
+   });
+   //TODO: make it load games, above is tmmr stuf
+});
+
+</script>
 </body>
 </html>

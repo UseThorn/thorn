@@ -1,6 +1,8 @@
 [
   {
-    "title": "Tiny Fishing",
-    "logo": "assets/img/tf.png"
+    "name": "Tiny Fishing",
+    "logo": "assets/img/tf.png",
+    "path": "gm/tf/",
+    "broken": false
   }
 ]
