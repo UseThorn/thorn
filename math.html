@@ -3,45 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vortex - Math Learning Hub</title>
-    <meta name="description" content="Learn math with thorn! free lessons and premium courses.">   
+    <title>Vortex Math Academy</title>
+    <meta name="description" content="Master mathematics with expert-guided lessons and interactive courses.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
         body {
-            font-family: Arial, sans-serif;
+            font-family: 'Arial', sans-serif;
             margin: 0;
             padding: 0;
-            text-align: center;
-            background-color: #f4f4f4;
+            background-color: #f9f9f9;
+            color: #333;
         }
         header {
-            background-color: #007bff;
+            background: #0056b3;
             color: white;
             padding: 20px;
-            font-size: 26px;
+            text-align: center;
+            font-size: 24px;
             font-weight: bold;
         }
         .container {
-            max-width: 800px;
-            margin: 20px auto;
+            max-width: 1000px;
+            margin: 30px auto;
             background: white;
-            padding: 25px;
-            border-radius: 10px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
         }
-        section {
-            margin-bottom: 20px;
+        h1, h2 {
+            color: #0056b3;
         }
-        .topic, .premium {
+        .courses {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .course {
+            flex: 1 1 calc(50% - 20px);
+            background: #eef5ff;
             padding: 15px;
             border-radius: 5px;
-            margin: 12px 0;
-            font-size: 18px;
-        }
-        .topic {
-            background: #e9ecef;
         }
         .premium {
-            background: #ffcc00;
+            background: #ffdd57;
             font-weight: bold;
         }
         .button {
@@ -51,65 +55,61 @@
             padding: 12px 20px;
             text-decoration: none;
             border-radius: 5px;
-            font-size: 18px;
-            transition: background 0.3s ease;
+            font-size: 16px;
+            transition: 0.3s;
         }
         .button:hover {
             background: #218838;
         }
         footer {
+            text-align: center;
             background: #222;
             color: white;
-            padding: 12px;
-            margin-top: 20px;
-            font-size: 14px;
+            padding: 15px;
+            margin-top: 30px;
         }
     </style>
 </head>
 <body>
-
     <header>
-        📚 Vortex - Math Learning Hub
+        <i class="fas fa-calculator"></i> Vortex Math Academy
     </header>
 
     <div class="container">
-        <h1>Welcome to the Best Place to Learn Math!</h1>
-        <p>Explore free lessons or unlock premium math courses.</p>
+        <h1>Enhance Your Math Skills with Expert Lessons</h1>
+        <p>Join our comprehensive math learning platform and master the subject step by step.</p>
 
-        <section>
-            <h2>📖 Free Math Lessons</h2>
-            <div class="topic">
+        <h2>📚 Free Math Lessons</h2>
+        <div class="courses">
+            <div class="course">
                 <h3>Basic Arithmetic</h3>
-                <p>Learn addition, subtraction, multiplication, and division.</p>
+                <p>Learn fundamental operations: addition, subtraction, multiplication, and division.</p>
             </div>
-            <div class="topic">
+            <div class="course">
                 <h3>Geometry Basics</h3>
-                <p>Discover the properties of shapes and formulas.</p>
+                <p>Explore shapes, angles, and formulas essential for problem-solving.</p>
             </div>
-        </section>
+        </div>
 
-        <section>
-            <h2>🔐 Premium Math Courses</h2>
-            <div class="premium">
+        <h2>🔐 Premium Math Courses</h2>
+        <div class="courses">
+            <div class="course premium">
                 <h3>Algebra Mastery</h3>
-                <p>Advanced equations, variables, and problem-solving techniques.</p>
+                <p>Gain confidence in solving equations, expressions, and inequalities.</p>
             </div>
-            <div class="premium">
+            <div class="course premium">
                 <h3>Calculus Made Easy</h3>
-                <p>Understand limits, derivatives, and integrals.</p>
+                <p>Understand derivatives, integrals, and their applications.</p>
             </div>
-        </section>
+        </div>
 
-        <section>
-            <h2>💳 Get Full Access</h2>
-            <p>Unlock all premium math courses with a one-time purchase.</p>
-            <a href="javascript:void(0);" onclick='alert("Buy form coming soon.")' class="button">Buy Access</a>
-        </section>
+        <h2>💳 Unlock Full Access</h2>
+        <p>Gain unlimited access to all premium math courses with a one-time purchase.</p>
+        <a href="#" onclick='alert("Subscription options coming soon!")' class="button">Subscribe Now</a>
     </div>
 
     <footer>
-        &copy; 2025 Vortex - Math Learning Hub | Learn, Grow, Succeed
+        &copy; 2025 Vortex Math Academy | Empowering Minds with Math Excellence
     </footer>
-
 </body>
 </html>
